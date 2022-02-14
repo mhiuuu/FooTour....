@@ -1,0 +1,156 @@
+        /*CSS*/
+        /*Import fonts*/
+        
+        @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        /*End!*/
+        /*A bunch of vars*/
+        
+         :root {
+            --clr-white: #fff;
+            --clr-dark-blue: #000e1c;
+            --clr-lighter-blue: #111927;
+            --clr-green: #09c372;
+            --clr-blue-mobile: #090d14;
+            --clr-lightest-blue: #041424;
+        }
+        /*End!*/
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--clr-dark-blue);
+            color: var(--clr-white);
+            font-family: 'Lobster', cursive;
+            font-size: 20px;
+        }
+        /*CSS for nav bar*/
+        
+        header a {
+            text-decoration: none;
+        }
+        
+        header {
+            padding: 0 20px;
+            background-color: var(--clr-lighter-blue);
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #brand {
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        
+        #brand a {
+            color: var(--clr-green);
+        }
+        
+        ul {
+            list-style: none;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        
+        ul a {
+            color: var(--clr-white);
+        }
+        
+        ul li {
+            padding: 5px;
+            margin-left: 10px;
+        }
+        
+        ul li:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        /*End!*/
+        /*CSS for mobile nav bar*/
+        
+        #hamburger-icon {
+            margin: auto 0;
+            display: none;
+            cursor: pointer;
+        }
+        
+        #hamburger-icon div {
+            width: 35px;
+            height: 3px;
+            background-color: var(--clr-white);
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        /*Navbar icons*/
+        
+        .open .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+            transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        
+        .open .bar2 {
+            opacity: 0;
+        }
+        
+        .open .bar3 {
+            -webkit-transform: rotate(45deg) translate(-6px, -8px);
+            transform: rotate(45deg) translate(-6px, -8px);
+        }
+        
+        .open .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        /*End!*/
+        
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            height: calc(100vh - 50px);
+            width: 40%;
+            background-color: var(--clr-blue-mobile);
+        }
+        
+        .mobile-menu li {
+            margin-bottom: 10px;
+            margin-right: 40px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            header nav {
+                display: none;
+            }
+            #hamburger-icon {
+                display: block;
+            }
+        }
+        /*End!*/
+        /*Main sections__1*/
+        
+        #Quote {
+            margin-top: 50px;
+            font-family: "Fredericka the Great", cursive;
+            font-size: 50px;
+        }
+        
+        #Cooking {
+            margin-top: 20px;
+            max-width: 80%;
+            max-height: 50%;
+            border-radius: 20px;
+        }
+        /*End!*/
