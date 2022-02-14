@@ -1,0 +1,404 @@
+/*Import fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Source+Serif+4&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&family=Pacifico&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*End!*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Varibles - a lot of varibles*/
+
+:root {
+    /*CSS varibles for navbar*/
+    --clr-dark-blue: #000e1c;
+    --clr-lighter-blue: #111927;
+    --clr-green: #09c372;
+    --clr-blue-mobile: #090d14;
+    --clr-lightest-blue: #041424;
+    /*End!*/
+    /*CSS color varibles for main section*/
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-white: #fff;
+    --clr-yellow-gold: #c59d5f;
+    /*End!*/
+    /*Fonts and other stuffs*/
+    --ff-Lobster: 'Lobster', cursive;
+    --ff-Open_Sans: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+}
+
+
+/*End!*/
+
+body {
+    font-family: var(--ff-Open_Sans);
+    background: var(--clr-dark-blue);
+    color: var(--clr-white);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+
+/*CSS for nav bar*/
+
+
+/*Nav bar for computer*/
+
+
+/*CSS for nav bar*/
+
+header a {
+    text-decoration: none;
+    font-family: var(--ff-Lobster);
+}
+
+header {
+    padding: 0 20px;
+    background-color: var(--clr-lighter-blue);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#brand {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+#brand a {
+    color: var(--clr-green);
+    font-family: var(--ff-Lobster);
+}
+
+ul {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ul a {
+    color: var(--clr-white);
+}
+
+ul li {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+/*End!*/
+
+
+/*CSS for mobile nav bar*/
+
+#hamburger-icon {
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: var(--clr-white);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+/*Navbar icons*/
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/*End!*/
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    height: calc(100vh - 50px);
+    width: 40%;
+    background-color: var(--clr-blue-mobile);
+}
+
+.mobile-menu li {
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    #hamburger-icon {
+        display: block;
+    }
+}
+
+
+/*End of nav bar!*/
+
+
+/*Adjust font-size*/
+
+img:not(.logo) {
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+h2,
+h3,
+h4 {
+    text-transform: capitalize;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+    font-family: "Roboto", sans-serif;
+    color: var(--clr-white);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--clr-yellow-gold);
+    font-family: "Fredericka the Great", cursive;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: whitesmoke;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
+
+/*End of adjusting the fonts-size*/
+
+
+/* section */
+
+.section {
+    padding: 5rem 0;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+/*The mennu*/
+
+.menu {
+    padding: 5rem 0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/*The line under the title*/
+
+.underline {
+    width: 5rem;
+    height: 0.25rem;
+    background: var(--clr-yellow-gold);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*End!*/
+
+
+/*Button for category*/
+
+.btn-container {
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-btn {
+    background: transparent;
+    border-color: var(--clr-yellow-gold);
+    font-family: 'Handlee', cursive;
+    font-size: 1rem;
+    color: var(--clr-white);
+    text-transform: capitalize;
+    margin: 0 0.5rem;
+    letter-spacing: 1px;
+    border-radius: var(--radius);
+    padding: 0.375rem 0.75rem;
+    color: var(--clr-gold);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    background: var(--clr-yellow-gold);
+    color: var(--clr-white);
+}
+
+
+/*End!*/
+
+
+/*The main menu where display text and images*/
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    gap: 3rem 2rem;
+    justify-items: center;
+    height: 300px;
+}
+
+.menu-item {
+    display: block;
+    gap: 1rem 3rem;
+    max-width: 25rem;
+}
+
+.photo {
+    object-fit: cover;
+    border: 0.25rem solid var(--clr-yellow-gold);
+    border-radius: var(--radius);
+    transition: 0.3s all ease-out 1ms;
+}
+
+.photo:hover {
+    height: 350px;
+}
+
+.item-info header {
+    padding-top: 17px;
+    background-color: none;
+    padding-bottom: -30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px dotted var(--clr-grey-5);
+    border-radius: var(--radius)
+}
+
+.item-info h4 {
+    margin-bottom: 0.5rem;
+    font-family: 'Handlee', cursive;
+    text-transform: uppercase;
+}
+
+.item-text {
+    font-family: 'Source Serif 4', sans-serif;
+    margin-bottom: 0;
+    padding-top: 1rem;
+    text-align: justify;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-item {
+        grid-template-columns: 225px 1fr;
+        gap: 0 1.25rem;
+        max-width: 40rem;
+    }
+    .photo {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section-center {
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
+    }
+    .photo {
+        height: 300px;
+    }
+}
